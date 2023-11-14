@@ -30,7 +30,7 @@ module "main" {
   name = var.prefix
   cidr = var.cidr_block
 
-  azs                     = ["usw1-az1", "usw1-az2", "usw1-az3"]
+  azs                     = ["usw1-az1", "usw1-az3"]
   public_subnets          = [for k, v in var.public_subnets : v]
   public_subnet_names     = [for k, v in var.public_subnets : "${var.prefix}-${k}"]
   enable_dns_hostnames    = true
